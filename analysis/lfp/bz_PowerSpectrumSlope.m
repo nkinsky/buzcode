@@ -96,7 +96,8 @@ if length(lfp.channels)>1
         lfp_temp = lfp; 
         lfp_temp.data = lfp_temp.data(:,cc); 
         lfp_temp.channels = lfp_temp.channels(cc);
-        specslope_temp = bz_PowerSpectrumSlope(lfp_temp,winsize,dt,varargin{:},'saveMat',false);
+        specslope_temp = bz_PowerSpectrumSlope(lfp_temp,winsize,dt,...
+            varargin{:},'saveMat',false);
         
         if ~exist('specslope','var')
             specslope = specslope_temp;
