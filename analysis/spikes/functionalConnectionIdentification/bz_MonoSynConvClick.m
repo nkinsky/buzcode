@@ -5,7 +5,7 @@ function mono_res = bz_MonoSynConvClick (spikeIDs,spiketimes,varargin)
 %%%  INPUTS
 %%%
 %%%  spikeIDs = Nx3 matrix. N = # spikes.
-%%%      col1 = shank ID, col2 = cluID on shanke, col3 = unit ID
+%%%      col1 = shank ID, col2 = cluID on shank, col3 = unit ID
 %%%
 %%%  spikestimes = Nx1 matrix aligned with spikeIDs where each row is a
 %%%      time stamp in ms.
@@ -129,7 +129,7 @@ for i = 1:2:length(varargin),
         case 'sorted'
             sorted = varargin{i+1};
         otherwise,
-            error(['Unknown property ''' num2str(varargin{i}) ''' (type ''help LoadBinary'' for details).']);
+            warning(['Unknown property ''' num2str(varargin{i}) ''' (type ''help LoadBinary'' for details).']);
     end
 end
 
@@ -296,15 +296,30 @@ n = histc(spikeIDs(:,3),1:length(allID));
 [nn1,nn2] = meshgrid(n);
 
 temp = ccgR - Pred;
-prob = temp./permute(repmat(nn2,1,1,size(ccgR,1)),[3 1 2]);
-
+UIDfix = false;
+try
+    pro
+    b = temp./permute(repmat(nn2,1,1,size(ccgR,1)),[3 1 2]);
+catch ME  % rough fix in case you are excluding cells but keeping original unitIDs.
+    if strcmp(ME.identifier, 'MATLAB:sizeDimensionsMustMatch')
+        warning('Size mismatch. Using only non-zero UIDs in probability calculation.')
+        temp = ccgR(:, IDindex, IDindex);
+        Pred = ccgR(:, IDindex, IDindex);
+        prob = temp./permute(repmat(nn2,1,1,size(ccgR,1)),[3 1 2]);
+        UIDfix = true;
+    end
+end
 
 
 %save outputs
 mono_res.ccgR = ccgR;
 mono_res.Pval = Pval;
 mono_res.prob = prob;
-mono_res.prob_noncor = ccgR./permute(repmat(nn2,1,1,size(ccgR,1)),[3 1 2]);
+if ~UIDfix
+    mono_res.prob_noncor = ccgR./permute(repmat(nn2,1,1,size(ccgR,1)),[3 1 2]);
+elseif UIDfix
+    mono_res.prob_noncor = ccgR(:, IDindex, IDindex)./permute(repmat(nn2,1,1,size(ccgR,1)),[3 1 2]);
+end
 mono_res.n = n;
 mono_res.sig_con = sig_con;
 mono_res.Pred = Pred;
@@ -317,6 +332,7 @@ mono_res.duration = duration;
 mono_res.ManuelEdit = plotit;
 mono_res.conv_w = conv_w;
 mono_res.Pcausal = Pcausal;
+mono_res.UID = IDindex;
 
 
 if foundMat

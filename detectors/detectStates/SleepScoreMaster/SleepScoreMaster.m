@@ -251,7 +251,7 @@ display('Quantifying metrics for state scoring')
                                        
 %Use the calculated scoring metrics to divide time into states
 display('Clustering States Based on EMG, SW, and TH LFP channels')
-[ints,idx,MinTimeWindowParms] = ClusterStates_DetermineStates(SleepScoreMetrics);
+[ints,idx,MinTimeWindowParms] = ClusterStates_Determine[States(SleepScoreMetrics);
 
 
                                 

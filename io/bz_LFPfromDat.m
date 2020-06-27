@@ -176,8 +176,14 @@ for ibatch = 1:nbChunks
         if useGPU
             d = gpuArray(d);
         end
-        
-        tmp=  iosr.dsp.sincFilter(d,ratio);
+        try  % NK added try/catch statement 
+            tmp=  iosr.dsp.sincFilter(d,ratio);
+        catch
+            disp('Error setting up GPU for LFP assignment. Going old-school')
+            useGPU = false;
+            d = double(dat(ii,:));
+            tmp=  iosr.dsp.sincFilter(d,ratio);
+        end
         if useGPU
             if ibatch==1
                 DATA(ii,:) = gather_try(int16(real( tmp(sampleRatio:sampleRatio:end-ntbuff))));

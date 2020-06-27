@@ -57,9 +57,13 @@ end
 
 t = xmltree(filename);
 
-paths = which('convert','-ALL');
+fullpaths = which('convert','-ALL');
+paths = cellfun(@fileparts, fullpaths,'UniformOutput', false);
 for i = 1:length(paths) % we need to find the right version of convert.m (2018a bugfix)
     if ~isempty(strfind(paths{i},'buzcode'))
+        while regexp(paths{i}, '@', 'once')  % can't have class folders in MATLAB path - loop through until you find parent directory to @xmltree.
+            paths{i} = fileparts(paths{i});
+        end         
        addpath(paths{i},'-begin') % bump buzcode/XML/convert to the top of the search path
     end
 end

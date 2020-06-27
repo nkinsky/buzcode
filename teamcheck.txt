@@ -1,0 +1,57 @@
+69c32c42debc028758b6e4af81529111  Take 2019-12-22 03.00.03 PM-POST.tak
+0b752d963d0157efb2e0958b51ab400f  Take 2019-12-22 08.11.07 AM-SD.tak
+c4f503f8b37f2415b4c6d58ff66abeeb  Take 2019-12-22 01.30.57 PM-TRACK3.tak
+4036ac8fbe241d1b090fe417de94a99d  Take 2019-12-22 01.18.30 PM-TRACK1.tak
+6e72679937ec1ce4405daf0cd13032f6  Take 2019-12-22 01.29.44 PM-TRACK2.tak
+5511cc89f7e0150a5ef9c42381527fc0  Take 2019-12-22 04.01.06 AM-REST-frozen at some time.tak
+143815a53bc35374f7e532645b3b697f  AG_2019-12-2-Day01-SD.csv
+af448cfdd996d7cfdb5dbfd15db9c99a  AG_2019-12-22-Day01_SD_track.csv
+253005bb70a0a2d0b897a4b1aa35850f  AG_2019-12-22_04-01-10_REST-SD/settings.xml
+74b3fb847b8436f3d59b79ff4776bbca  AG_2019-12-22_13-00-34_TRACK/settings_2.xml
+b8fe0650254d431c0a5393bed41b3cf9  AG_2019-12-22_13-00-34_TRACK/impedance_measurement.xml
+467ad8ecef328d52943291bcaa0319b4  AG_2019-12-22_14-57-46_POST/settings_3.xml
+55ed8c5358f7c8d65125d51002ba6e42  AG_2019-12-22_14-57-46_POST/impedance_measurement.xml
+5994bde7444b7ce32f850edd05268f20  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/sync_messages.txt
+567d032bedf20526428d7a49b637a37b  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/structure.oebin
+4cceadf1746a0488f95703b9fbc332bd  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/sync_messages.txt
+567d032bedf20526428d7a49b637a37b  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/structure.oebin
+fdfdbfd57c3e22409f4dcba7c49ddf12  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/sync_messages.txt
+567d032bedf20526428d7a49b637a37b  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/structure.oebin
+51ed762d7fa12c2556a1eb95fe3bec7a  AG_2019-12-22_14-57-46_POST/experiment3/recording1/sync_messages.txt
+567d032bedf20526428d7a49b637a37b  AG_2019-12-22_14-57-46_POST/experiment3/recording1/structure.oebin
+7f301250d0d997138f61e6e3fd70ec6d  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/continuous/Rhythm_FPGA-100.0/timestamps.npy
+b3340743bb7a79a9f5c372415b0f7257  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/continuous/Rhythm_FPGA-100.0/continuous.dat
+9d74e6f220f25701e6f624c06385394f  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/continuous/Rhythm_FPGA-100.0/timestamps.npy
+c7caab20523178c3bd344f09da33e4eb  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/continuous/Rhythm_FPGA-100.0/continuous.dat
+a802c143e393cc4ec3bf4c5485494554  AG_2019-12-22_14-57-46_POST/experiment3/recording1/continuous/Rhythm_FPGA-100.0/timestamps.npy
+c269e4ecbb4a2080a6555cbec6b3418d  AG_2019-12-22_14-57-46_POST/experiment3/recording1/continuous/Rhythm_FPGA-100.0/continuous.dat
+7a21d373b0465af82207f4cb62927479  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/events/Rhythm_FPGA-100.0/TTL_1/channel_states.npy
+fd54501d100600681e06df232da179c5  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/events/Rhythm_FPGA-100.0/TTL_1/timestamps.npy
+f276ba2210b5bbd07de3e8e53e57cde8  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/events/Rhythm_FPGA-100.0/TTL_1/channels.npy
+788f03de44b8744c6227c003848caf6b  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/events/Rhythm_FPGA-100.0/TTL_1/full_words.npy
+7056e6a3a71b2606f73045e7934c8b0c  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/events/Message_Center-904.0/TEXT_group_1/text.npy
+fd54501d100600681e06df232da179c5  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/events/Message_Center-904.0/TEXT_group_1/timestamps.npy
+f276ba2210b5bbd07de3e8e53e57cde8  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording1/events/Message_Center-904.0/TEXT_group_1/channels.npy
+5a6635507e9e5a54f36bfddb58f77e5f  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/continuous/Rhythm_FPGA-100.0/timestamps.npy
+0187335d6f58faaafc3ede43f21a8c27  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/continuous/Rhythm_FPGA-100.0/continuous.dat
+7a21d373b0465af82207f4cb62927479  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/events/Rhythm_FPGA-100.0/TTL_1/channel_states.npy
+fd54501d100600681e06df232da179c5  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/events/Rhythm_FPGA-100.0/TTL_1/timestamps.npy
+f276ba2210b5bbd07de3e8e53e57cde8  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/events/Rhythm_FPGA-100.0/TTL_1/channels.npy
+788f03de44b8744c6227c003848caf6b  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/events/Rhythm_FPGA-100.0/TTL_1/full_words.npy
+7056e6a3a71b2606f73045e7934c8b0c  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/events/Message_Center-904.0/TEXT_group_1/text.npy
+fd54501d100600681e06df232da179c5  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/events/Message_Center-904.0/TEXT_group_1/timestamps.npy
+f276ba2210b5bbd07de3e8e53e57cde8  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/events/Message_Center-904.0/TEXT_group_1/channels.npy
+7056e6a3a71b2606f73045e7934c8b0c  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/events/Message_Center-904.0/TEXT_group_1/text.npy
+fd54501d100600681e06df232da179c5  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/events/Message_Center-904.0/TEXT_group_1/timestamps.npy
+f276ba2210b5bbd07de3e8e53e57cde8  AG_2019-12-22_13-00-34_TRACK/experiment2/recording1/events/Message_Center-904.0/TEXT_group_1/channels.npy
+7a21d373b0465af82207f4cb62927479  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/events/Rhythm_FPGA-100.0/TTL_1/channel_states.npy
+fd54501d100600681e06df232da179c5  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/events/Rhythm_FPGA-100.0/TTL_1/timestamps.npy
+f276ba2210b5bbd07de3e8e53e57cde8  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/events/Rhythm_FPGA-100.0/TTL_1/channels.npy
+788f03de44b8744c6227c003848caf6b  AG_2019-12-22_04-01-10_REST-SD/experiment1/recording2/events/Rhythm_FPGA-100.0/TTL_1/full_words.npy
+7a21d373b0465af82207f4cb62927479  AG_2019-12-22_14-57-46_POST/experiment3/recording1/events/Rhythm_FPGA-100.0/TTL_1/channel_states.npy
+fd54501d100600681e06df232da179c5  AG_2019-12-22_14-57-46_POST/experiment3/recording1/events/Rhythm_FPGA-100.0/TTL_1/timestamps.npy
+f276ba2210b5bbd07de3e8e53e57cde8  AG_2019-12-22_14-57-46_POST/experiment3/recording1/events/Rhythm_FPGA-100.0/TTL_1/channels.npy
+788f03de44b8744c6227c003848caf6b  AG_2019-12-22_14-57-46_POST/experiment3/recording1/events/Rhythm_FPGA-100.0/TTL_1/full_words.npy
+7056e6a3a71b2606f73045e7934c8b0c  AG_2019-12-22_14-57-46_POST/experiment3/recording1/events/Message_Center-904.0/TEXT_group_1/text.npy
+fd54501d100600681e06df232da179c5  AG_2019-12-22_14-57-46_POST/experiment3/recording1/events/Message_Center-904.0/TEXT_group_1/timestamps.npy
+f276ba2210b5bbd07de3e8e53e57cde8  AG_2019-12-22_14-57-46_POST/experiment3/recording1/events/Message_Center-904.0/TEXT_group_1/channels.npy

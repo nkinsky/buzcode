@@ -61,7 +61,7 @@ channellist = h5readatt(tkwik,['/channel_groups/' num2str(shank)],'channel_order
 %% find channels missing from spike groups becuase they were in "bad_channels.txt"
 % this reflects what the xml and klusters expect but is not present
 % will fill in data from missing channels with zeros
-Par = LoadParameters(fullfile(basepath,[basename '.xml']));
+Par = LoadParameters(fullfile(basepath,[basename '.xml']));  % NRK - error here loading in things!
 
 spkgroupchannellist = Par.SpkGrps(shank).Channels + 1;
 if length(spkgroupchannellist) > length(channellist)

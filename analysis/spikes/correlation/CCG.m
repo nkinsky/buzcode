@@ -83,7 +83,7 @@ end
 groups = groups(:);
 times = times(:);
 
-% Parse parameter list
+%% Parse parameter list
 for i = 1:2:length(varargin),
 	if ~ischar(varargin{i}),
 		error(['Parameter ' num2str(i+2) ' is not a property (type ''help <a href="matlab:help CCG">CCG</a>'' for details).']);
@@ -100,7 +100,7 @@ for i = 1:2:length(varargin),
 				error('Incorrect value for property ''duration'' (type ''help <a href="matlab:help CCG">CCG</a>'' for details).');
             end
             
-            case 'Fs',
+            case 'fs',
 			Fs = varargin{i+1};
 			if ~isdscalar(Fs,'>0'),
 				error('Incorrect value for property ''Fs'' (type ''help <a href="matlab:help CCG">CCG</a>'' for details).');
@@ -113,7 +113,7 @@ end
 
 
 
-% Number of groups, number of bins, etc.
+%% Number of groups, number of bins, etc.
 if length(groups) == 1,
 	groups = ones(length(times),1);
 	nGroups = 1;

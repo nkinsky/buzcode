@@ -48,14 +48,37 @@ function mono_res = bz_GetMonoSynapticallyConnected(basepath,varargin)
 %%%  mono_res.FalsePositive = FalsePositive rate from English et al., 2017;
 %%%  mono_res.TruePositive = TruePositive rate from English et al., 2017;
 
-%Written by Sam McKenzie 2017
+%Written by Sam McKenzie 2017. % Updated by Nat Kinsky 2020.
+
+ip = inputParser;
+ip.addRequired('basepath', @ischar);
+ip.addParameter('data_type', 'bz', @(a) any(strcmpi(a, {'bz', 'hiro'})));
+ip.addParameter('hiro_session_name', '', @ischar); % required for loading Hiro Miyawaki formatted data.
+ip.parse(basepath, varargin{:});
+data_type = ip.Results.data_type;
+session_name = ip.Results.hiro_session_name;
 
 %load data
-spikes = bz_GetSpikes('basepath',basepath);
+if strcmpi(data_type, 'bz')
+    bz_spikes = bz_GetSpikes('basepath',basepath);
+elseif strcmpi(data_type, 'hiro')
+    load(basepath,'spikes')
+    bz_spikes = Hiro_to_bz(spikes.(session_name), session_name);
+end
 
 %get shank clu
-spikeIDs = [spikes.shankID(spikes.spindices(:,2))' spikes.cluID(spikes.spindices(:,2))' spikes.spindices(:,2)];
-
+if strcmpi(data_type, 'bz')
+    spikeIDs = [bz_spikes.shankID(bz_spikes.spindices(:,2))' ...
+        bz_spikes.cluID(bz_spikes.spindices(:,2))' bz_spikes.spindices(:,2)];
+elseif strcmpi(data_type, 'hiro')
+    [cluIDfull, shankIDfull] = deal(nan(1,max(bz_spikes.UID))); 
+    shankIDfull(bz_spikes.UID) = bz_spikes.shankID;
+    cluIDfull(bz_spikes.UID) = bz_spikes.cluID;
+    spikeIDs = [shankIDfull(bz_spikes.spindices(:,2))' ...
+        cluIDfull(bz_spikes.spindices(:,2))' bz_spikes.spindices(:,2)];
+end
 %call main script
-mono_res = bz_MonoSynConvClick (spikeIDs,spikes.spindices(:,1),varargin);
+mono_res = bz_MonoSynConvClick (spikeIDs,bz_spikes.spindices(:,1),varargin);
+
+    
 end
