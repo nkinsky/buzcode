@@ -1,4 +1,4 @@
-function [sessionInfo] = bz_getSessionInfo(basePath,varargin)
+    function [sessionInfo] = bz_getSessionInfo(basePath,varargin)
 %[sessionInfo] = bz_getSessionInfo(basePath) loads the sessionInfo metadata
 %for the recording in basePath. basePath should be in the format:
 %       /whateverPath/baseName/

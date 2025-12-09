@@ -25,6 +25,7 @@ addParameter(p,'window',2)
 addParameter(p,'smoothfact',15)
 addParameter(p,'IRASA',true)
 addParameter(p,'ThIRASA',true)
+addParameter(p, 'norm', true)
 parse(p,varargin{:})
 onSticky = p.Results.onSticky; 
 ignoretime = p.Results.ignoretime; 
@@ -32,6 +33,7 @@ window = p.Results.window;
 smoothfact = p.Results.smoothfact; 
 IRASA = p.Results.IRASA; 
 ThIRASA = p.Results.ThIRASA; 
+norm = p.Results.norm;
 
 %This is the sticky trigger passed through to DetermineStates via histsandthreshs
 if onSticky
@@ -216,8 +218,11 @@ if ~isempty(ignoretime) || ~isempty(badtimes_TH) || ~isempty(badtimes)
     t_clus(ignoretimeIDX) = [];
     t_thclu(ignoretimeIDX) = [];
 end
-broadbandSlowWave = bz_NormToRange(broadbandSlowWave,[0 1]);
-thratio = bz_NormToRange(thratio,[0 1]);
+
+if norm  % Normalize data to span from 0 to 1
+    broadbandSlowWave = bz_NormToRange(broadbandSlowWave,[0 1]);
+    thratio = bz_NormToRange(thratio,[0 1]);
+end
  
 %% Motion: EMG or Accel as of 6/2021
 
@@ -239,8 +244,9 @@ broadbandSlowWave(prMotiontime) = []; thratio(prMotiontime) = []; t_clus(prMotio
 motiondata = interp1(motion.timestamps,motion.smoothed,t_clus,'nearest');
 
 %Min/Max Normalize
-motiondata = bz_NormToRange(motiondata,[0 1]);
-
+if norm
+    motiondata = bz_NormToRange(motiondata,[0 1]);
+end
 
 %% BELOW IS GETTING HISTOGRAMS AND THRESHOLDS FOR SCORING IN         %%
 %  CLUSTERSTATES_DetermineStates and visualization in TheStateEditor %%\
